@@ -6,6 +6,8 @@
 
 linewidth = 3;
 axiswidth = 2;
+perc = 0:100;
+r2d = 180/pi;
 %% x y z ankle angles - group means single vs multi
 figure;
 set(gcf, 'Color', 'White');
@@ -19,7 +21,7 @@ for j = 1:3
     r0 = yline(0);
     set(r0,'LineWidth',1, 'LineStyle', '--', 'Color', 'black')
     if j == 1
-        ylabel('Angle (rad)')
+        ylabel('Angle (deg)')
     end
     xlabel('% Stance')
     axis([0 100 -0.5*r2d 0.5*r2d])
@@ -58,7 +60,7 @@ for j = 1:3
 %     r0 = yline(0);
 %     set(r0,'LineWidth',1, 'LineStyle', '--', 'Color', 'black')
     if j == 1
-        ylabel('Angular Velocity (rad/s)')
+        ylabel('Angular Velocity (deg/s)')
     end
     xlabel('% Stance')
 %     axis([0 100 -0.5 0.5])
